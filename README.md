@@ -1,4 +1,4 @@
-# Skills-For-Hire-Canoe-Project-Muna
+# Skills-For-Hire-Canoe-Project
 
 Project 1: Creating the home page of the Halifax Canoe and Kayak site and styling it with css and building the navigation bar with jQuery.
 
