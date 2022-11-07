@@ -8,7 +8,7 @@
                 <div id="navMenu">
                     <a href="index.php">Home</a>
                     <a href="book.php">Book Trip</a>
-                    <a href="#">Admin Log</a>
+                    <a href="displayadmin.php">Admin Log</a>
                 </div>
             </div>
 

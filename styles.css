@@ -45,6 +45,8 @@ footer{
     flex:auto;
   }
 
+
+
 /**********************************Navigation bar styles***********************/
 
 .flex-container {
@@ -170,6 +172,7 @@ footer{
 }
 
 
+
 /*****************************  Form Styles *************************/
 
 label {
@@ -235,6 +238,20 @@ input[type=submit]:hover {
     font-size: 1.25rem;
     padding-top: 10px;
     padding-bottom: 2px;
+
+}
+.align-link{
+    display:flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.align-link div {
+
+    color: red;
+    font-size: 1.5rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+   /** flex-grow: 2;**/
 
 }
 

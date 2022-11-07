@@ -9,13 +9,18 @@
 <?php
     include 'link.php'; 
     ?>
+
+<?php
+    include 'connection.php'; 
+    ?>  
+
 <div class="wrapper">
     <main class="main">
     <aside></aside>
         <article>
             <header>
             <div class= "content-header">
-                <h1>Book A Trip</h1>
+                <h1>Admin - Add Adventure</h1>
                 <hr>
             </div>
             </header>
@@ -25,24 +30,23 @@
             <section>
             
                 <div class="section-content">
-                <h2 style ="font-weight:400">Just some Quick Details</h2>
+                <h2 style ="font-weight:400">Input details about the trip</h2>
 
                <!---------------------Form------------------------>
-                    <form action="thank-you.php" method="get">
-                        <label for="email">Email</label>
-                        <input type="text" id ="email" name="email" autofocus placeholder="Type email here" required>
-                        <br>
-                        
-                        <label for="locations">Location</label>
-                        <select id="locations" name="locations" required>
-                               <option value="" >Select</option>
-                               <option value="Clarenville NL">Clarenville NL</option>
-                               <option value="Valley NS">Valley NS</option>
-                        </select> 
+                    <form action="admin-confirm.php" method="POST">
+                        <label for="heading">Heading</label>
+                        <input type="text" id ="heading" name="heading" autofocus required>
                         <br>
     
                         <label for="tripDate">Trip Date</label>
                         <input type="date" id="tripDate" name="tripDate" required >
+                        <br>
+
+                        <label for="duration">Duration</label>
+                        <input type="number" id ="duration" name="duration" min="1" max="999" required>
+                        <br>
+                        <label for="summary">Summary</label>
+                        <input type="text" id ="summary" name="summary" required>
                         <br>
 
                         <input type="submit" name="Submit">

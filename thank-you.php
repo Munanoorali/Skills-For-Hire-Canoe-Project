@@ -6,7 +6,7 @@
     include 'nav.php'; 
     ?>
 <?php
-    include 'connection.php'; 
+    include 'link.php'; 
     ?>
 
 <div class="wrapper">
