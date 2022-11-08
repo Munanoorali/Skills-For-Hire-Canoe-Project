@@ -57,12 +57,11 @@
                    
                 </div>
             </section>
-            <br>
-            <br>
-            <br>
-            <p style="text-align:center; font-size:2.5rem; color:black;"><a href ="index.php">View All Adventures</a></p>
-            <!--<p class="adminviewlink"><a href ="all-adventures.php">View All Adventures</a></p>
-            <a class= viewlink href  ="all-adventures.php">View All Adventures</a>-->
+                <br>
+                <br>
+                <br>
+                <p style="text-align:center; font-size:2.5rem; color:black;"><a href ="index.php">View All Adventures</a></p>
+            
         </article>
     </main>
 </div>

@@ -29,26 +29,28 @@
         <!--Section Blocks-->
             <section>
             
-                <div class="section-content">
+              <div class="section-content">
                 <h2 style ="font-weight:400">Delete the trip</h2>
                 
   
 
-<?php
+                   <?php
 
-		// Get Var from URL
+		              // Get Var from URL
        
-       $ID_v = mysqli_real_escape_string($conn, $_GET['id']);
-      $sqlTripDelete= "DELETE FROM tripsdetails WHERE id='$ID_v' ";
-      if ($conn->query($sqlTripDelete) === TRUE) {
-           echo "Record deleted successfully";
+                       $ID_v = mysqli_real_escape_string($conn, $_GET['id']);
+                       $sqlTripDelete= "DELETE FROM tripsdetails WHERE id='$ID_v' ";
+                            if ($conn->query($sqlTripDelete) === TRUE) {
+                               echo "Record deleted successfully";
 
-  } else {
-      echo "Error deleting record: " . $conn->error;
-  }
+                            } 
+                            
+                            else {
+                            echo "Error deleting record: " . $conn->error;
+                            }
 
 
-?>
+                    ?>
 
 
 
@@ -56,12 +58,12 @@
                 </div>
 
             </section>
-            <br>
-            <br>
-            <br>
-            <p style="text-align:center; font-size:2.5rem; color:black;"><a href ="index.php">View All Adventures</a></p>
-            </article>
-</main>            
+                  <br>
+                  <br>
+                  <br>
+                    <p style="text-align:center; font-size:2.5rem; color:black;"><a href ="index.php">View All Adventures</a></p>
+        </article>
+    </main>            
 </div>
 
 <?php
