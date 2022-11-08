@@ -38,36 +38,32 @@
 
             </header>
 
-
-
-
             <!--Section Blocks-->
             <section>
 
                 <div class="section-content">
-<?php
-	$sql = "SELECT * FROM tripsdetails";
-	$result = mysqli_query($conn, $sql);
+                     <?php
+	                   $sql = "SELECT * FROM tripsdetails";
+	                   $result = mysqli_query($conn, $sql);
 
-	if (mysqli_num_rows($result) > 0) {
-	    // output data of each row
-	    while($row = mysqli_fetch_assoc($result)) {
-             $heading=$row["heading"];
-             $tripDate=$row["tripDate"];
-             $duration=$row["duration"];
-             $summary=$row["summary"];
+	                     if (mysqli_num_rows($result) > 0) {
+	                       // output data of each row
+	                           while($row = mysqli_fetch_assoc($result)) {
+                                  $heading=$row["heading"];
+                                  $tripDate=$row["tripDate"];
+                                  $duration=$row["duration"];
+                                  $summary=$row["summary"];
 
-             echo "<h1> $heading </h1>";
-             echo "<p>" . "Date: $tripDate <br>";
-             echo "Duration: $duration days <br> </p>";
-             echo "<h2>Summary</h2>";
-             echo "<p>$summary</p>";
-
-	    }
-	} else {
-	    echo "0 results";
-	}
-?>
+                                  echo "<h1> $heading </h1>";
+                                  echo "<p>" . "Date: $tripDate <br>";
+                                  echo "Duration: $duration days <br> </p>";
+                                  echo "<h2>Summary</h2>";
+                                  echo "<p>$summary</p>";
+	                              }
+	                      } else {
+	                       echo "0 results";
+	                      }
+                      ?>
 
             </section>
 
