@@ -46,61 +46,58 @@
 
                 <div class="section-content">
                     <!-- To add new trips-->
-                   <div class= "align-link">
-                      <div>
-                         <?php
-                            echo "<a href=admin-add.php".">Add New Trip</a>";
-                         ?>
-                      </div>
-                   </div>               
-                  <?php
-	                $sql = "SELECT * FROM tripsdetails";
-	                $result = mysqli_query($conn, $sql);
+                            <div class= "align-link">
+                              <div>
+                                <?php
+                                 echo "<a href=admin-add.php".">Add New Trip</a>";
+                                ?>
+                              </div>
+                            </div>
+			
+                       <?php
+	                    $sql = "SELECT * FROM tripsdetails";
+	                    $result = mysqli_query($conn, $sql);
 
-	                 if (mysqli_num_rows($result) > 0) {
-	                 // output data of each row
-	                 while($row = mysqli_fetch_assoc($result)) {
-                      $heading=$row["heading"];
-                      $tripDate=$row["tripDate"];
-                      $duration=$row["duration"];
-                      $summary=$row["summary"];
+	                        if (mysqli_num_rows($result) > 0) {
+	                            // output data of each row
+	                            while($row = mysqli_fetch_assoc($result)) {
+                                       $heading=$row["heading"];
+                                       $tripDate=$row["tripDate"];
+                                       $duration=$row["duration"];
+                                       $summary=$row["summary"];
 
-             echo "<h1> $heading </h1>";
-             echo "<p>" . "Date: $tripDate <br>";
-             echo "Duration: $duration days <br> </p>";
-             echo "<h2>Summary</h2>";
-             echo "<p>$summary</p> <br>";
-//echo "<a href=".$row['text'].">some text</a>";
-?>
+                                      echo "<h1> $heading </h1>";
+                                      echo "<p>" . "Date: $tripDate <br>";
+                                      echo "Duration: $duration days <br> </p>";
+                                      echo "<h2>Summary</h2>";
+                                      echo "<p>$summary</p> <br>";
+                                     //echo "<a href=".$row['text'].">some text</a>";
+                                   ?>
 
-<div class= "align-link">
-        <!--<div>
-             <?php
-             //echo "<a href=admin-add.php".">Add Trip</a>";
-             ?>
-        </div>-->
+                                          <div class= "align-link">
+				             <!--To update trip--> 
+                                                 <div>
+                                                   <?php
+                                                     echo "<a href=admin-update.php?id=".$row["id"].">Update Trip</a>";
+                                                    ?>
+                                                 </div>
+					 
+				             <!--To delete trip-->
+                                                  <div>
+                                                   <?php
+                                                     echo "<a href=delete-trip.php?id=".$row["id"].">Delete Trip</a>";
+                                                   ?>
+                                                  </div>
+                                           </div>
 
-        <div>
-            <?php
-             echo "<a href=admin-update.php?id=".$row["id"].">Update Trip</a>";
-            ?>
-        </div>
-            
-        <div>
-            <?php
-             echo "<a href=delete-trip.php?id=".$row["id"].">Delete Trip</a>";
-             ?>
-        </div>
-</div>
+                                    <?php
+                                      echo"<br>";
 
-             <?php
-             echo"<br>";
-
-	    }
-	} else {
-	    echo "0 results";
-	}
-?>
+	                                      }
+	                          } else {
+	                                 echo "0 results";
+	                                 }
+                                     ?>
 
             </section>
 
